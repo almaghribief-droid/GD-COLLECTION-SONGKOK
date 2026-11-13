@@ -1,0 +1,146 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>GD COLLECTION | Songkok Peci Bordir Custom & Grosir</title>
+<meta name="description" content="GD Collection melayani pembuatan songkok dan peci bordir logo custom serta pesanan grosir untuk sekolah, madrasah, pesantren dan organisasi seluruh Indonesia.">
+<meta name="keywords" content="songkok bordir logo, peci bordir custom, grosir songkok, peci sekolah, songkok pesantren, peci organisasi">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:Arial,sans-serif;background:#f7f7f1;color:#20372b;line-height:1.7}
+header{background:#102d22;color:white;padding:18px 7%;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap}
+.logo{font-size:23px;font-weight:bold;color:#e4c477;letter-spacing:2px}
+nav a{color:white;text-decoration:none;margin:8px;font-size:14px}
+.hero{background:linear-gradient(135deg,#102d22,#315b40);color:white;text-align:center;padding:85px 7%}
+.hero h1{font-size:clamp(30px,5vw,48px);line-height:1.2;margin-bottom:18px}
+.hero h1 span,.gold{color:#e4c477}
+.hero p{max-width:700px;margin:0 auto 28px;color:#e5e9e5}
+.btn{display:inline-block;background:#dfbd69;color:#142d21;padding:13px 25px;border-radius:6px;text-decoration:none;font-weight:bold}
+section{padding:65px 8%}
+.heading{text-align:center;margin-bottom:35px}
+.heading h2{font-size:29px;color:#173b2a}
+.heading p{color:#68756c;margin-top:8px}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:20px}
+.card{background:white;padding:25px;border-radius:12px;border:1px solid #e5e5da;box-shadow:0 5px 18px #00000008}
+.card h3{color:#24543a;margin-bottom:10px}
+.symbol{font-size:35px;margin-bottom:12px}
+.about{background:#e9ede4}
+.gallery-card{background:#173b2a;color:white;border-radius:12px;padding:30px;text-align:center;min-height:150px;display:flex;flex-direction:column;justify-content:center}
+.gallery-card strong{color:#e4c477;font-size:20px}
+.cta{background:#102d22;color:white;text-align:center}
+.cta h2{font-size:30px;color:#e4c477;margin-bottom:12px}
+.cta p{margin-bottom:25px}
+footer{background:#091d18;color:#cbd4cc;text-align:center;padding:25px;font-size:13px}
+@media(max-width:600px){
+header{justify-content:center;gap:12px}
+nav{text-align:center}
+nav a{margin:5px;font-size:12px}
+.hero{padding:65px 6%}
+section{padding:48px 6%}
+}
+</style>
+</head>
+<body>
+
+<header>
+<div class="logo">GD COLLECTION</div>
+<nav>
+<a href="#beranda">Beranda</a>
+<a href="#layanan">Layanan</a>
+<a href="#galeri">Galeri</a>
+<a href="#kontak">Kontak</a>
+</nav>
+</header>
+
+<main>
+<div class="hero" id="beranda">
+<h1>SONGKOK & PECI<br><span>BORDIR LOGO CUSTOM</span></h1>
+<p>Melayani pembuatan songkok dan peci dengan bordir logo sesuai identitas sekolah, madrasah, pesantren, komunitas dan organisasi Anda.</p>
+<a class="btn" href="https://wa.me/6288200652974?text=Assalamualaikum%20GD%20Collection%2C%20saya%20ingin%20bertanya%20tentang%20songkok%20bordir%20custom.">KONSULTASI VIA WHATSAPP</a>
+</div>
+
+<section id="layanan">
+<div class="heading">
+<h2>Layanan GD Collection</h2>
+<p>Solusi kebutuhan songkok dan peci untuk berbagai keperluan.</p>
+</div>
+<div class="cards">
+<div class="card">
+<div class="symbol">🧵</div>
+<h3>Bordir Logo Custom</h3>
+<p>Pembuatan bordir logo sesuai desain dan identitas sekolah, yayasan, madrasah, pesantren maupun organisasi.</p>
+</div>
+<div class="card">
+<div class="symbol">🎓</div>
+<h3>Songkok Sekolah & Pesantren</h3>
+<p>Melayani kebutuhan songkok untuk TK, PAUD, SD, MI, SMP, MTs, SMA, MA hingga pondok pesantren.</p>
+</div>
+<div class="card">
+<div class="symbol">🏢</div>
+<h3>Pesanan Grosir</h3>
+<p>Menerima pesanan partai besar untuk instansi, lembaga pendidikan, komunitas dan organisasi.</p>
+</div>
+<div class="card">
+<div class="symbol">📦</div>
+<h3>Pengiriman Seluruh Indonesia</h3>
+<p>Melayani pemesanan dari berbagai daerah dengan komunikasi dan konsultasi langsung melalui WhatsApp.</p>
+</div>
+</div>
+</section>
+
+<section class="about">
+<div class="heading">
+<h2>Tentang GD Collection</h2>
+<p>Mitra kebutuhan songkok dan peci bordir custom Anda.</p>
+</div>
+<div style="max-width:800px;margin:auto;text-align:center">
+<p>GD Collection merupakan penyedia songkok dan peci yang melayani pembuatan bordir logo custom serta pesanan grosir. Kami membantu sekolah, madrasah, pesantren, yayasan dan organisasi menghadirkan songkok dengan identitas masing-masing.</p>
+<p style="margin-top:15px">Konsultasikan kebutuhan, desain logo, jenis produk dan jumlah pesanan Anda secara langsung bersama kami.</p>
+</div>
+</section>
+
+<section id="galeri">
+<div class="heading">
+<h2>Galeri Kategori Produk</h2>
+<p>Contoh kebutuhan songkok dan peci bordir custom.</p>
+</div>
+<div class="cards">
+<div class="gallery-card">
+<strong>LOGO SEKOLAH</strong>
+<p>Identitas sekolah dan madrasah</p>
+</div>
+<div class="gallery-card">
+<strong>LOGO PESANTREN</strong>
+<p>Identitas pondok dan santri</p>
+</div>
+<div class="gallery-card">
+<strong>LOGO ORGANISASI</strong>
+<p>Komunitas dan kelembagaan</p>
+</div>
+<div class="gallery-card">
+<strong>BORDIR CUSTOM</strong>
+<p>Desain sesuai permintaan</p>
+</div>
+</div>
+</section>
+
+<section class="cta" id="kontak">
+<h2>Butuh Songkok Bordir Custom?</h2>
+<p>Kirim desain logo dan konsultasikan kebutuhan pesanan Anda bersama GD Collection.</p>
+<a class="btn" href="https://wa.me/6288200652974?text=Assalamualaikum%20GD%20Collection%2C%20saya%20ingin%20konsultasi%20pesanan%20songkok%20bordir%20custom%20atau%20grosir.">HUBUNGI KAMI VIA WHATSAPP</a>
+</section>
+</main>
+
+<footer>
+<strong>GD COLLECTION</strong>
+<p>Spesialis Songkok & Peci Bordir Logo Custom</p>
+<p>Melayani Pesanan Grosir Seluruh Indonesia</p>
+<p>© 2026 GD Collection. Hak Cipta Dilindungi.</p>
+</footer>
+
+</body>
+</html>
+
