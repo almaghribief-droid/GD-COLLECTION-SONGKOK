@@ -328,17 +328,39 @@
       box-shadow: 0 12px 35px rgba(183,255,0,.12);
     }
 
-    .product-icon {
+    .reference-gallery {
       display: grid;
-      place-items: center;
-      width: 62px;
-      height: 62px;
-      margin: 0 auto 16px;
-      border: 1px solid var(--gold);
-      border-radius: 50%;
-      color: var(--lime);
-      background: rgba(183,255,0,.06);
-      font-size: 24px;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 18px;
+      margin: 30px 0 34px;
+    }
+    .reference-card {
+      overflow: hidden;
+      border: 1px solid rgba(212,175,55,.55);
+      border-radius: 6px;
+      background: #111407;
+    }
+    .reference-card img {
+      display: block;
+      width: 100%;
+      aspect-ratio: 4 / 3;
+      object-fit: cover;
+      background: #202610;
+    }
+    .reference-card p {
+      padding: 12px 14px 4px;
+      color: #f1edda;
+      font-size: 13px;
+    }
+    .reference-card small {
+      display: block;
+      padding: 0 14px 14px;
+      color: #b7bd9e;
+      font-size: 10px;
+    }
+    .reference-card a { color: #d4af37; }
+    @media (max-width: 700px) {
+      .reference-gallery { grid-template-columns: 1fr; }
     }
 
     .product-card h3 {
@@ -720,8 +742,7 @@
 
         <div class="product-grid">
           <article class="product-card">
-            <div class="product-icon">♛</div>
-            <h3>Peci Polos</h3>
+<h3>Peci Polos</h3>
             <p>
               Model songkok polos tanpa bordir logo,
               untuk berbagai kebutuhan pemakaian.
@@ -729,8 +750,7 @@
           </article>
 
           <article class="product-card">
-            <div class="product-icon">✧</div>
-            <h3>AC Pinggir</h3>
+<h3>AC Pinggir</h3>
             <p>
               Model songkok dengan lapisan AC pada bagian pinggir.
               Konsultasikan pilihan model dan ukurannya.
@@ -738,8 +758,7 @@
           </article>
 
           <article class="product-card">
-            <div class="product-icon">✦</div>
-            <h3>Full AC</h3>
+<h3>Full AC</h3>
             <p>
               Pilihan model full AC dengan lapisan AC
               yang lebih menyeluruh.
@@ -747,8 +766,7 @@
           </article>
 
           <article class="product-card">
-            <div class="product-icon">♜</div>
-            <h3>Bordir Logo Custom</h3>
+<h3>Bordir Logo Custom</h3>
             <p>
               Songkok dan peci dengan bordir logo sesuai
               kebutuhan sekolah, yayasan dan organisasi.
@@ -756,8 +774,7 @@
           </article>
 
           <article class="product-card">
-            <div class="product-icon">✧</div>
-            <h3>Songkok Sekolah</h3>
+<h3>Songkok Sekolah</h3>
             <p>
               Kebutuhan songkok untuk PAUD, sekolah,
               madrasah dan pesantren.
@@ -765,12 +782,34 @@
           </article>
 
           <article class="product-card">
-            <div class="product-icon">♛</div>
-            <h3>Peci Organisasi</h3>
+<h3>Peci Organisasi</h3>
             <p>
               Konsultasi songkok dan peci untuk yayasan,
               komunitas, majelis taklim dan organisasi.
             </p>
+          </article>
+        </div>
+
+        <div class="section-head" style="margin-top:34px">
+          <div class="eyebrow">Visual Reference</div>
+          <h2 class="section-title">Referensi Model Songkok</h2>
+          <p>Foto referensi model songkok dari sumber terbuka. Foto ini untuk gambaran model, bukan dokumentasi stok atau hasil produksi GD COLLECTION.</p>
+        </div>
+        <div class="reference-gallery">
+          <article class="reference-card">
+            <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Foto_peci.jpg" alt="Foto peci hitam polos sebagai referensi model" loading="lazy">
+            <p>Peci hitam polos</p>
+            <small>Foto: Sabil Khoer Al Munawar · CC0 · <a href="https://commons.wikimedia.org/wiki/File:Foto_peci.jpg" target="_blank" rel="noopener">Sumber foto</a></small>
+          </article>
+          <article class="reference-card">
+            <img src="https://commons.wikimedia.org/wiki/Special:FilePath/New_songkok_ready_for_Raya.jpg" alt="Referensi beberapa songkok siap digunakan" loading="lazy">
+            <p>Model songkok siap pakai</p>
+            <small>Foto: Aia1911 · CC BY-SA 4.0 · <a href="https://commons.wikimedia.org/wiki/File:New_songkok_ready_for_Raya.jpg" target="_blank" rel="noopener">Sumber foto</a></small>
+          </article>
+          <article class="reference-card">
+            <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Songkok_Guru.jpg" alt="Referensi songkok guru khas Makassar" loading="lazy">
+            <p>Referensi songkok guru</p>
+            <small>Lisensi: CC BY-SA 4.0 · <a href="https://commons.wikimedia.org/wiki/File:Songkok_Guru.jpg" target="_blank" rel="noopener">Sumber foto</a></small>
           </article>
         </div>
 
