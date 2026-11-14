@@ -1,34 +1,85 @@
 <!doctype html>
 <html lang="id">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#071a35">
-  <title>GD COLLECTION JARVIS</title>
-  <style>
-    :root{color-scheme:dark;font-family:Arial,sans-serif;background:#061329;color:#eaf5ff}
-    *{box-sizing:border-box}body{margin:0;min-height:100vh;background:radial-gradient(circle at 50% 0,#123c68,#061329 55%)}
-    main{max-width:760px;margin:auto;padding:28px 18px}header{text-align:center;padding:26px 10px}
-    .orb{width:86px;height:86px;margin:0 auto 16px;border:2px solid #55c9ff;border-radius:50%;box-shadow:0 0 22px #1daeff,inset 0 0 20px #1daeff;display:grid;place-items:center;color:#8ee4ff;font-size:30px}
-    h1{letter-spacing:3px;font-size:22px;margin:8px 0}p{color:#a9c8e2;line-height:1.5}
-    section{background:#0b203b;border:1px solid #1b5680;border-radius:16px;padding:20px;margin:16px 0;box-shadow:0 8px 30px #0004}
-    input,button{width:100%;padding:14px;border-radius:10px;border:1px solid #28638e;background:#07182d;color:#fff;font-size:16px}
-    button{margin-top:10px;background:#087bb7;border:0;font-weight:bold}#msg{min-height:24px;color:#8ee4ff}
-    .small{font-size:12px;color:#7899b8}
-  </style>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#06152b">
+<title>GD SMART ASSISTANT</title>
+<style>
+:root{color-scheme:dark;--cyan:#68d9ff;--blue:#238cff;--ink:#061326;--panel:rgba(9,30,56,.78);font-family:Inter,system-ui,Arial,sans-serif}
+*{box-sizing:border-box}body{margin:0;min-height:100vh;color:#eaf7ff;background:radial-gradient(ellipse at 50% 30%,#123e68 0,#091d38 36%,#040c1b 78%);overflow-x:hidden}
+body:before,body:after{content:"";position:fixed;inset:0;pointer-events:none;background-image:linear-gradient(rgba(75,177,255,.045) 1px,transparent 1px),linear-gradient(90deg,rgba(75,177,255,.045) 1px,transparent 1px);background-size:42px 42px;mask-image:linear-gradient(to bottom,black,transparent 90%)}
+main{position:relative;z-index:1;max-width:1120px;margin:auto;padding:24px 18px 48px}
+.top{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:8px 0 22px;border-bottom:1px solid #2a5c7c88}
+.brand{font-size:13px;letter-spacing:3px;font-weight:800;color:#d9f5ff}.brand span{color:var(--cyan)}.status{font-size:11px;letter-spacing:1.5px;color:#91e8ff}.dot{display:inline-block;width:7px;height:7px;border-radius:50%;background:#54f0c1;box-shadow:0 0 12px #54f0c1;margin-right:8px}
+.view{display:none}.view.active{display:block}
+.login-wrap{min-height:76vh;display:grid;place-items:center}.login{width:min(100%,430px);text-align:center;padding:34px 28px;border:1px solid #3b9bd477;border-radius:24px;background:linear-gradient(145deg,#0b2849dd,#07172cdd);box-shadow:0 25px 90px #0008, inset 0 0 35px #248fd018}
+.mark{width:84px;height:84px;border:1px solid #70dfff;border-radius:50%;margin:0 auto 20px;display:grid;place-items:center;color:#b6f4ff;font-size:34px;box-shadow:0 0 25px #2abaff88,inset 0 0 24px #2abaff55;animation:pulse 3s ease-in-out infinite}
+h1{font-size:clamp(22px,4vw,32px);letter-spacing:3px;margin:8px 0;color:#eafaff}h2{font-size:19px;letter-spacing:1.5px}p{color:#a9c8e3;line-height:1.65}.sub{font-size:12px;letter-spacing:2px;color:#7fcfff}
+input,button{font:inherit}input{width:100%;padding:15px 16px;border-radius:11px;border:1px solid #3276a2;background:#041326;color:white;outline:none;margin:16px 0 8px}input:focus{border-color:#71dfff;box-shadow:0 0 0 3px #43bfff22}
+button{border:1px solid #53caff66;background:linear-gradient(100deg,#087bbd,#1551a5);color:white;padding:13px 18px;border-radius:11px;font-weight:750;letter-spacing:1px;cursor:pointer;transition:.2s}button:hover{filter:brightness(1.18);transform:translateY(-1px)}button:disabled{opacity:.55;cursor:wait}.primary{width:100%;margin-top:10px}.quiet{background:#0a2440;border-color:#2e7099}.message{min-height:24px;font-size:13px;color:#ffb8b8}
+.welcome{text-align:center;padding:26px 0 10px}.welcome h1{font-size:clamp(25px,5vw,42px)}.welcome .sub{margin-top:10px}
+.holo-stage{height:390px;max-width:680px;margin:8px auto 22px;position:relative;display:grid;place-items:center;isolation:isolate}
+.halo{position:absolute;width:min(75vw,330px);aspect-ratio:1;border-radius:50%;border:1px solid #55d5ff88;box-shadow:0 0 35px #1aaaff55,inset 0 0 45px #1aaaff33;animation:rotate 18s linear infinite}
+.halo:before,.halo:after{content:"";position:absolute;inset:16px;border:1px dashed #7be8ff88;border-radius:50%}.halo:after{inset:34px;border-style:solid;border-color:#3b9fff66;animation:rotate 12s linear infinite reverse}
+.avatar{position:relative;width:185px;height:245px;filter:drop-shadow(0 0 18px #3bcaff);opacity:.95}
+.avatar .head{position:absolute;top:18px;left:58px;width:70px;height:86px;border:2px solid #9cecff;border-radius:48% 48% 43% 43%;background:linear-gradient(135deg,#75e7ff44,#147fc733);box-shadow:inset 0 0 22px #4bdfff77}
+.avatar .hair{position:absolute;top:10px;left:48px;width:90px;height:118px;border:2px solid #65dfff;border-bottom:0;border-radius:55% 55% 20% 20%;background:linear-gradient(90deg,#35b8ef22,#9deeff22);clip-path:polygon(8% 0,92% 0,100% 100%,78% 75%,70% 100%,22% 100%,17% 73%,0 100%)}
+.avatar .neck{position:absolute;top:98px;left:83px;width:22px;height:35px;background:#57cfff55;border:1px solid #8deaff}
+.avatar .body{position:absolute;top:125px;left:24px;width:138px;height:112px;border:2px solid #76e4ff;border-radius:70px 70px 20px 20px;background:linear-gradient(120deg,#1ba7e955,#154f9d55);box-shadow:inset 0 0 30px #58dfff55}
+.avatar .eye{position:absolute;top:57px;width:7px;height:3px;background:#d9ffff;box-shadow:0 0 8px #a6f7ff;border-radius:5px;z-index:2}.avatar .eye.left{left:77px}.avatar .eye.right{left:105px}
+.avatar .mouth{position:absolute;top:83px;left:89px;width:12px;height:3px;border-bottom:1px solid #d9ffff;z-index:2}
+.scan{position:absolute;width:min(90vw,470px);height:1px;background:linear-gradient(90deg,transparent,#80efff,transparent);box-shadow:0 0 12px #4ddfff;animation:scan 3.8s ease-in-out infinite}
+.holo-caption{position:absolute;bottom:0;font-size:11px;letter-spacing:4px;color:#83dfff;text-shadow:0 0 12px #39baff}
+.speech{max-width:700px;margin:0 auto 20px;padding:20px 22px;border:1px solid #367eaa88;border-radius:18px;background:linear-gradient(120deg,#0a2848d9,#081a31e8);box-shadow:0 12px 35px #0005;text-align:center}
+.speech strong{display:block;color:#a9edff;letter-spacing:2px;font-size:12px;margin-bottom:10px}.speech p{margin:0;color:#e0f6ff;font-size:16px}
+.actions{display:flex;justify-content:center;gap:10px;flex-wrap:wrap}.actions button{min-width:150px}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin:28px 0}.tile{border:1px solid #2d6790;background:#0a213bba;border-radius:15px;padding:17px;min-height:104px}.tile b{display:block;color:#dff8ff;margin:7px 0}.tile span{font-size:12px;color:#8fb5d1}
+.foot{text-align:center;color:#6488a7;font-size:11px;letter-spacing:1px;margin-top:34px}
+@keyframes pulse{50%{box-shadow:0 0 42px #2abaffaa,inset 0 0 30px #2abaff77;transform:scale(1.04)}}
+@keyframes rotate{to{transform:rotate(360deg)}}@keyframes scan{0%,100%{transform:translateY(-135px);opacity:0}20%,80%{opacity:.9}50%{transform:translateY(135px)}}
+@media(max-width:650px){main{padding:16px 14px 35px}.holo-stage{height:330px}.avatar{transform:scale(.82)}.grid{grid-template-columns:1fr 1fr}.speech p{font-size:14px}.welcome{padding-top:30px}}
+@media(prefers-reduced-motion:reduce){*,*:before,*:after{animation:none!important;scroll-behavior:auto!important}}
+</style>
 </head>
-<body><main>
-  <header><div class="orb">✦</div><h1>GD COLLECTION</h1><p>JARVIS AI · BUSINESS ASSISTANT</p></header>
-  <section>
-    <h2>Masuk ke JARVIS</h2>
-    <p>Kerangka awal dashboard. Login akan aktif setelah server dikonfigurasi.</p>
-    <input id="password" type="password" placeholder="Kata sandi admin" autocomplete="current-password">
-    <button id="login">MASUK</button><p id="msg" role="status"></p>
-  </section>
-  <section><h3>Status sistem</h3><p id="health">Memeriksa server...</p><p class="small">Belum digunakan untuk menyimpan data pelanggan sungguhan.</p></section>
+<body>
+<main>
+ <div class="top"><div class="brand">GD <span>SMART</span> ASSISTANT</div><div class="status"><i class="dot"></i><span id="topStatus">SECURE ACCESS</span></div></div>
+ <section id="loginView" class="view active">
+  <div class="login-wrap"><div class="login">
+   <div class="mark">✧</div><div class="sub">INTELLIGENT STORE PLATFORM</div>
+   <h1>GD SMART ASSISTANT</h1><p>Asisten pintar untuk membantu mengelola bisnis Anda.</p>
+   <form id="loginForm"><input id="password" type="password" placeholder="Kata sandi akun" autocomplete="current-password" required><button class="primary" id="loginButton" type="submit">MASUK KE SISTEM</button></form>
+   <div class="message" id="loginMessage" role="status"></div>
+   <p style="font-size:11px">Akses prototipe admin. Pendaftaran multi-pengguna belum diaktifkan.</p>
+  </div></div>
+ </section>
+ <section id="assistantView" class="view">
+  <div class="welcome"><div class="sub">PERSONAL BUSINESS INTELLIGENCE</div><h1>SELAMAT DATANG KEMBALI</h1><p>Sistem Anda telah aktif. Asisten Anda siap membantu.</p></div>
+  <div class="holo-stage" aria-label="Hologram asisten AI">
+   <div class="halo"></div><div class="scan"></div>
+   <div class="avatar"><div class="hair"></div><div class="head"></div><div class="eye left"></div><div class="eye right"></div><div class="mouth"></div><div class="neck"></div><div class="body"></div></div>
+   <div class="holo-caption">AI CORE · ONLINE</div>
+  </div>
+  <div class="speech"><strong>GD SMART ASSISTANT</strong><p id="greeting">Selamat datang. Sistem Anda telah aktif. Saya siap membantu mengelola bisnis Anda. Apa yang ingin Anda lakukan hari ini?</p></div>
+  <div class="actions"><button id="speakButton">▶ DENGARKAN SAPAAN</button><button class="quiet" id="stopButton">■ HENTIKAN SUARA</button><button class="quiet" id="logoutButton">KELUAR</button></div>
+  <div class="grid">
+   <div class="tile">▣ <b>Produk & Harga</b><span>Kelola katalog toko</span></div>
+   <div class="tile">◉ <b>Pelanggan</b><span>Data pelanggan dan prospek</span></div>
+   <div class="tile">▤ <b>Pesanan</b><span>Catatan dan status pesanan</span></div>
+   <div class="tile">◷ <b>Penjualan</b><span>Ringkasan transaksi</span></div>
+   <div class="tile">✧ <b>Asisten AI</b><span>Interaksi suara dan teks</span></div>
+   <div class="tile">⌘ <b>Pengaturan</b><span>Pengaturan akun toko</span></div>
+  </div>
+ </section>
+ <div class="foot">GD SMART ASSISTANT · YOUR SMART BUSINESS PARTNER</div>
 </main>
 <script>
-async function check(){try{const r=await fetch('/api/health');const d=await r.json();document.getElementById('health').textContent='Server merespons · '+d.stage}catch(e){document.getElementById('health').textContent='Backend belum terhubung.'}}
-document.getElementById('login').addEventListener('click',async()=>{const msg=document.getElementById('msg');msg.textContent='Memproses...';try{const r=await fetch('/api/login',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({password:document.getElementById('password').value})});const d=await r.json();msg.textContent=d.ok?'Login berhasil. Dashboard akan dikembangkan berikutnya.':(d.error||'Gagal login.')}catch(e){msg.textContent='Server belum tersedia.'}});
-check();
-</script></body></html>
+const $=id=>document.getElementById(id);
+function show(id){document.querySelectorAll('.view').forEach(v=>v.classList.remove('active'));$(id).classList.add('active')}
+function speakGreeting(){if(!('speechSynthesis'in window)){ $('loginMessage').textContent='Browser ini belum mendukung suara otomatis.';return }speechSynthesis.cancel();const u=new SpeechSynthesisUtterance($('greeting').textContent);u.lang='id-ID';u.rate=.94;u.pitch=1.12;const voices=speechSynthesis.getVoices();const female=voices.find(v=>/female| perempuan|Google.*Bahasa Indonesia|Indonesian/i.test(v.name+' '+v.lang));if(female)u.voice=female;speechSynthesis.speak(u)}
+$('loginForm').addEventListener('submit',async e=>{e.preventDefault();const btn=$('loginButton'),msg=$('loginMessage');btn.disabled=true;msg.textContent='Menghubungkan ke sistem...';try{const r=await fetch('/api/login',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({password:$('password').value})});const d=await r.json();if(!r.ok)throw new Error(d.error||'Login gagal.');show('assistantView');$('topStatus').textContent='ASSISTANT ONLINE';setTimeout(speakGreeting,650)}catch(err){msg.textContent=err.message||'Server belum tersedia.'}finally{btn.disabled=false}});
+$('speakButton').addEventListener('click',speakGreeting);$('stopButton').addEventListener('click',()=>{if('speechSynthesis'in window)speechSynthesis.cancel()});
+$('logoutButton').addEventListener('click',async()=>{if('speechSynthesis'in window)speechSynthesis.cancel();try{await fetch('/api/logout',{method:'POST'})}catch(e){}$('password').value='';show('loginView');$('topStatus').textContent='SECURE ACCESS'});
+</script>
+</body></html>
