@@ -17,20 +17,313 @@
 </main>
 <script>
 const initial=[
-{name:"MIN 2 Jakarta Pusat",area:"Jakarta Pusat",category:"Madrasah Ibtidaiyah",phone:"0214227836",email:"min2jb@yahoo.co.id",source:"https://dki.kemenag.go.id/unit-kerja-madrasah-ibtidaiyah",note:"Prospek pengadaan peci seragam; hubungi bagian tata usaha."},
-{name:"MIN 5 Jakarta Utara",area:"Jakarta Utara",category:"Madrasah Ibtidaiyah",phone:"0214368837",email:"minplumpung@yahoo.co.id",source:"https://dki.kemenag.go.id/unit-kerja-madrasah-ibtidaiyah",note:"Kontak dan alamat bersumber dari daftar Kemenag DKI; verifikasi ulang."},
-{name:"MAN 5 Jakarta Utara",area:"Cilincing, Jakarta Utara",category:"Madrasah Aliyah Negeri",phone:"02144851573",email:"madrasahaliyahnegeri.cilincing@gmail.com",source:"https://dki.kemenag.go.id/unit-kerja-madrasah-aliyah",note:"Tawarkan peci hitam bordir logo untuk siswa/kegiatan."},
-{name:"Madrasah Istiqlal Jakarta",area:"Jakarta Pusat",category:"Madrasah / Boarding School",phone:"",email:"maistiqlaljakarta@gmail.com",source:"https://mij.sch.id/ibs/",note:"Email resmi MAS Istiqlal; cari kontak pengadaan melalui kanal resmi."},
-{name:"Gudang Songkok Jakarta",area:"Matraman, Jakarta Timur",category:"Toko songkok / grosir",phone:"082216052947",email:"",source:"https://www.google.com/maps/search/?api=1&query=Gudang+Songkok+Jakarta",note:"Calon mitra/reseller atau pembanding pemasok; pastikan peluang kerja sama."},
-{name:"Grosir Radja Peci",area:"Petamburan, Tanah Abang, Jakarta Pusat",category:"Toko peci / grosir",phone:"081546864403",email:"",source:"https://www.google.com/maps/search/?api=1&query=Grosir+Radja+Peci+Jakarta",note:"Calon reseller/mitra; tawarkan produksi bordir logo custom."},
-{name:"Distributor Songkok / Peci",area:"Kemayoran, Jakarta Pusat",category:"Distributor songkok",phone:"081807950922",email:"",source:"https://www.google.com/maps/search/?api=1&query=Distributor+Songkok+Peci+Kemayoran",note:"Tanyakan apakah menerima pemasok atau produksi private label."}
+  {
+    "id": 1,
+    "name": "MIS Tarbiyatussaadah",
+    "area": "Kembangan Utara, Jakarta Barat",
+    "category": "Madrasah Ibtidaiyah",
+    "phone": "085810000050",
+    "email": "info@tarbiyatussaadah.sch.id",
+    "source": "https://tarbiyatussaadah.sch.id/kontak",
+    "note": "Kontak WhatsApp dan email tercantum di situs resmi madrasah.",
+    "status": "Belum dihubungi"
+  },
+  {
+    "id": 2,
+    "name": "MIN 22 Jakarta Utara",
+    "area": "Cilincing, Jakarta Utara",
+    "category": "Madrasah Ibtidaiyah",
+    "phone": "02144852505",
+    "email": "min22.rorotan@yahoo.com",
+    "source": "https://dki.kemenag.go.id/unit-kerja-madrasah-ibtidaiyah",
+    "note": "Kontak dari direktori resmi Kemenag DKI.",
+    "status": "Belum dihubungi"
+  },
+  {
+    "id": 3,
+    "name": "MIN 20 Jakarta Utara",
+    "area": "Marunda, Jakarta Utara",
+    "category": "Madrasah Ibtidaiyah",
+    "phone": "02144852369",
+    "email": "min20m@yahoo.co.id",
+    "source": "https://dki.kemenag.go.id/unit-kerja-madrasah-ibtidaiyah",
+    "note": "Kontak dari direktori resmi Kemenag DKI.",
+    "status": "Belum dihubungi"
+  },
+  {
+    "id": 4,
+    "name": "MIN 19 Jakarta Barat",
+    "area": "Meruya Selatan, Jakarta Barat",
+    "category": "Madrasah Ibtidaiyah",
+    "phone": "02158900182",
+    "email": "min19jakarta@gmail.com",
+    "source": "https://dki.kemenag.go.id/unit-kerja-madrasah-ibtidaiyah",
+    "note": "Kontak dari direktori resmi Kemenag DKI.",
+    "status": "Belum dihubungi"
+  },
+  {
+    "id": 5,
+    "name": "MIN 7 Jakarta Barat",
+    "area": "Cengkareng Timur, Jakarta Barat",
+    "category": "Madrasah Ibtidaiyah",
+    "phone": "02154394834",
+    "email": "mincengkarengtimurjkt@yahoo.co.id",
+    "source": "https://dki.kemenag.go.id/unit-kerja-madrasah-ibtidaiyah",
+    "note": "Kontak dari direktori resmi Kemenag DKI.",
+    "status": "Belum dihubungi"
+  },
+  {
+    "id": 6,
+    "name": "MIN 11 Jakarta Barat",
+    "area": "Kalideres, Jakarta Barat",
+    "category": "Madrasah Ibtidaiyah",
+    "phone": "02154392061",
+    "email": "minpegadunganjkt@kemenag.go.id",
+    "source": "https://dki.kemenag.go.id/unit-kerja-madrasah-ibtidaiyah",
+    "note": "Kontak dari direktori resmi Kemenag DKI.",
+    "status": "Belum dihubungi"
+  },
+  {
+    "id": 7,
+    "name": "MIN 4 Jakarta Selatan",
+    "area": "Pondok Pinang, Jakarta Selatan",
+    "category": "Madrasah Ibtidaiyah",
+    "phone": "0217696466",
+    "email": "min4jkt@kemenag.go.id",
+    "source": "https://dki.kemenag.go.id/unit-kerja-madrasah-ibtidaiyah",
+    "note": "Kontak dari direktori resmi Kemenag DKI.",
+    "status": "Belum dihubungi"
+  },
+  {
+    "id": 8,
+    "name": "MIN 18 Jakarta Timur",
+    "area": "Pasar Rebo, Jakarta Timur",
+    "category": "Madrasah Ibtidaiyah",
+    "phone": "02187708769",
+    "email": "min18jakarta@gmail.com",
+    "source": "https://dki.kemenag.go.id/unit-kerja-madrasah-ibtidaiyah",
+    "note": "Kontak dari direktori resmi Kemenag DKI.",
+    "status": "Belum dihubungi"
+  },
+  {
+    "id": 9,
+    "name": "MIN 3 Jakarta Timur",
+    "area": "Cijantung, Jakarta Timur",
+    "category": "Madrasah Ibtidaiyah",
+    "phone": "0218412754",
+    "email": "min3terpadu@yahoo.co.id",
+    "source": "https://dki.kemenag.go.id/unit-kerja-madrasah-ibtidaiyah",
+    "note": "Kontak dari direktori resmi Kemenag DKI.",
+    "status": "Belum dihubungi"
+  },
+  {
+    "id": 10,
+    "name": "MIN 12 Jakarta Timur",
+    "area": "Cibubur, Jakarta Timur",
+    "category": "Madrasah Ibtidaiyah",
+    "phone": "02187700228",
+    "email": "minduabelas@yahoo.com",
+    "source": "https://dki.kemenag.go.id/unit-kerja-madrasah-ibtidaiyah",
+    "note": "Kontak dari direktori resmi Kemenag DKI.",
+    "status": "Belum dihubungi"
+  },
+  {
+    "id": 11,
+    "name": "MAN 21 Jakarta Utara",
+    "area": "Rorotan, Cilincing, Jakarta Utara",
+    "category": "Madrasah Aliyah Negeri",
+    "phone": "02144852310",
+    "email": "man21jkt@kemenag.go.id",
+    "source": "https://dki.kemenag.go.id/unit-kerja-madrasah-aliyah",
+    "note": "Kontak dari direktori resmi Kemenag DKI.",
+    "status": "Belum dihubungi"
+  },
+  {
+    "id": 12,
+    "name": "MAN 10 Jakarta Barat",
+    "area": "Joglo, Kembangan, Jakarta Barat",
+    "category": "Madrasah Aliyah Negeri",
+    "phone": "0215857220",
+    "email": "manjoglo10@yahoo.com",
+    "source": "https://dki.kemenag.go.id/unit-kerja-madrasah-aliyah",
+    "note": "Kontak dari direktori resmi Kemenag DKI.",
+    "status": "Belum dihubungi"
+  },
+  {
+    "id": 13,
+    "name": "MAN 22 Jakarta Barat",
+    "area": "Palmerah, Jakarta Barat",
+    "category": "Madrasah Aliyah Negeri",
+    "phone": "0215362935",
+    "email": "man22jakarta@yahoo.co.id",
+    "source": "https://dki.kemenag.go.id/unit-kerja-madrasah-aliyah",
+    "note": "Kontak dari direktori resmi Kemenag DKI.",
+    "status": "Belum dihubungi"
+  },
+  {
+    "id": 14,
+    "name": "MAN 1 Jakarta Barat",
+    "area": "Grogol Petamburan, Jakarta Barat",
+    "category": "Madrasah Aliyah Negeri",
+    "phone": "0215600768",
+    "email": "man1jkt@kemenag.go.id",
+    "source": "https://dki.kemenag.go.id/unit-kerja-madrasah-aliyah",
+    "note": "Kontak dari direktori resmi Kemenag DKI.",
+    "status": "Belum dihubungi"
+  },
+  {
+    "id": 15,
+    "name": "MAN 17 Jakarta Barat",
+    "area": "Cengkareng, Jakarta Barat",
+    "category": "Madrasah Aliyah Negeri",
+    "phone": "02154392537",
+    "email": "man17jakarta@ymail.com",
+    "source": "https://dki.kemenag.go.id/unit-kerja-madrasah-aliyah",
+    "note": "Kontak dari direktori resmi Kemenag DKI.",
+    "status": "Belum dihubungi"
+  },
+  {
+    "id": 16,
+    "name": "MAN 12 Jakarta Barat",
+    "area": "Duri Kosambi, Cengkareng, Jakarta Barat",
+    "category": "Madrasah Aliyah Negeri",
+    "phone": "0215448566",
+    "email": "man12jakartabarat@gmail.com",
+    "source": "https://dki.kemenag.go.id/unit-kerja-madrasah-aliyah",
+    "note": "Kontak dari direktori resmi Kemenag DKI.",
+    "status": "Belum dihubungi"
+  },
+  {
+    "id": 17,
+    "name": "MTsN 32 Jakarta",
+    "area": "Jakarta Barat",
+    "category": "Madrasah Tsanawiyah Negeri",
+    "phone": "085715602930",
+    "email": "",
+    "source": "https://mtsn32jkt.sch.id/layanan-publik/",
+    "note": "Nomor WhatsApp tercantum pada situs resmi; telepon 02158906414.",
+    "status": "Belum dihubungi"
+  },
+  {
+    "id": 18,
+    "name": "MTsN 13 Jakarta",
+    "area": "Pesanggrahan, Jakarta Selatan",
+    "category": "Madrasah Tsanawiyah Negeri",
+    "phone": "",
+    "email": "info@mtsn13jakarta.sch.id",
+    "source": "https://mtsn13jakarta.sch.id/sambutan-kepala-sekolah",
+    "note": "Telepon resmi 02173883765; email dari situs resmi.",
+    "status": "Belum dihubungi"
+  },
+  {
+    "id": 19,
+    "name": "MTsN 9 Jakarta",
+    "area": "Johar Baru, Jakarta Pusat",
+    "category": "Madrasah Tsanawiyah Negeri",
+    "phone": "",
+    "email": "info@mtsn9jakarta.sch.id",
+    "source": "https://www.mtsn9jakarta.sch.id/",
+    "note": "Telepon resmi 0214252061; email dari situs resmi.",
+    "status": "Belum dihubungi"
+  },
+  {
+    "id": 20,
+    "name": "MAN 14 Jakarta",
+    "area": "Pekayon, Pasar Rebo, Jakarta Timur",
+    "category": "Madrasah Aliyah Negeri",
+    "phone": "",
+    "email": "man14pekayon@gmail.com",
+    "source": "https://www.man14jkt.sch.id/kontak",
+    "note": "Telepon resmi 02187701114; email juga ptspman14jkt@gmail.com.",
+    "status": "Belum dihubungi"
+  },
+  {
+    "id": 21,
+    "name": "Gudang Songkok Jakarta",
+    "area": "Utan Kayu Selatan, Matraman, Jakarta Timur",
+    "category": "Toko grosir peci/songkok",
+    "phone": "082216052947",
+    "email": "",
+    "source": "https://www.google.com/maps/search/?api=1&query=Gudang+Songkok+Jakarta",
+    "note": "Calon mitra grosir/penjual ulang; verifikasi minat menerima pemasok.",
+    "status": "Belum dihubungi"
+  },
+  {
+    "id": 22,
+    "name": "Grosir Radja Peci",
+    "area": "Petamburan, Tanah Abang, Jakarta Pusat",
+    "category": "Toko peci / grosir",
+    "phone": "081546864403",
+    "email": "",
+    "source": "https://www.google.com/maps/search/?api=1&query=Grosir+Radja+Peci+Jakarta",
+    "note": "Calon mitra/reseller; verifikasi peluang kerja sama.",
+    "status": "Belum dihubungi"
+  },
+  {
+    "id": 23,
+    "name": "Peci Sarung Umroh Crownmas",
+    "area": "Kebon Kacang, Tanah Abang, Jakarta Pusat",
+    "category": "Grosir perlengkapan muslim",
+    "phone": "081519811110",
+    "email": "",
+    "source": "https://www.google.com/maps/search/?api=1&query=Peci+Sarung+Umroh+Crownmas+Tanah+Abang",
+    "note": "Toko grosir peci/perlengkapan muslim; tawarkan suplai bordir custom.",
+    "status": "Belum dihubungi"
+  },
+  {
+    "id": 24,
+    "name": "Toko Kosovo Sultan Peci Songkok",
+    "area": "Kampung Bali, Tanah Abang, Jakarta Pusat",
+    "category": "Grosir peci/songkok",
+    "phone": "081283116166",
+    "email": "",
+    "source": "https://www.google.com/maps/search/?api=1&query=Toko+Kosovo+Sultan+Peci+Songkok",
+    "note": "Calon mitra grosir; tanyakan kebutuhan produksi custom.",
+    "status": "Belum dihubungi"
+  },
+  {
+    "id": 25,
+    "name": "Toko Grosir Peci Faradira",
+    "area": "Pasar Jatinegara, Jakarta Timur",
+    "category": "Toko grosir peci",
+    "phone": "08128736201",
+    "email": "",
+    "source": "https://www.google.com/maps/search/?api=1&query=Toko+Grosir+Peci+Faradira",
+    "note": "Calon reseller/mitra; nomor publik pada listing bisnis.",
+    "status": "Belum dihubungi"
+  },
+  {
+    "id": 26,
+    "name": "SDIT Al-Kiyan",
+    "area": "Kebagusan, Pasar Minggu, Jakarta Selatan",
+    "category": "Sekolah Islam Terpadu",
+    "phone": "081380000522",
+    "email": "",
+    "source": "https://www.google.com/maps/search/?api=1&query=SDIT+Al-Kiyan+Jakarta",
+    "note": "Sekolah Islam; kontak publik pada listing bisnis.",
+    "status": "Belum dihubungi"
+  },
+  {
+    "id": 27,
+    "name": "Jakarta Islamic School (JISc)",
+    "area": "Cipinang Melayu, Makasar, Jakarta Timur",
+    "category": "Sekolah Islam",
+    "phone": "08111277155",
+    "email": "",
+    "source": "https://www.google.com/maps/search/?api=1&query=Jakarta+Islamic+School+JISc",
+    "note": "Sekolah Islam multi-jenjang; kontak publik pada listing bisnis.",
+    "status": "Belum dihubungi"
+  },
+  {
+    "id": 28,
+    "name": "Global Islamic School",
+    "area": "Condet, Kramat Jati, Jakarta Timur",
+    "category": "Sekolah Islam",
+    "phone": "081280340506",
+    "email": "gischool@global-islamic.com",
+    "source": "https://www.google.com/maps/search/?api=1&query=Global+Islamic+School+Jakarta",
+    "note": "Kontak publik dari listing bisnis; konfirmasi lewat kanal resmi.",
+    "status": "Belum dihubungi"
+  }
 ];
-let leads=JSON.parse(localStorage.getItem("gd_sales_leads")||"null")||initial.map((x,i)=>({...x,id:i+1,status:"Belum dihubungi"}));
-const save=()=>localStorage.setItem("gd_sales_leads",JSON.stringify(leads));
-const clean=s=>String(s||"").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
-function render(){const q=document.getElementById("q").value.toLowerCase(),f=document.getElementById("filter").value;const shown=leads.filter(x=>(!f||x.status===f)&&[x.name,x.area,x.category,x.note].join(" ").toLowerCase().includes(q));document.getElementById("total").textContent=leads.length;document.getElementById("todo").textContent=leads.filter(x=>x.status==="Belum dihubungi").length;document.getElementById("hot").textContent=leads.filter(x=>["Tertarik","Closing"].includes(x.status)).length;document.getElementById("leads").innerHTML=shown.length?shown.map(x=>{const wa=x.phone?x.phone.replace(/\D/g,"").replace(/^0/,"62"):"";const msg=encodeURIComponent("Assalamu’alaikum, perkenalkan kami GD COLLECTION, spesialis songkok/peci hitam bordir logo custom. Apakah Bapak/Ibu menerima penawaran pemasok peci untuk kebutuhan sekolah/lembaga? Jika berkenan, kami dapat mengirimkan katalog dan daftar harga. Terima kasih.");return '<article class="lead"><span class="tag">'+clean(x.category)+'</span><h3>'+clean(x.name)+'</h3><p>📍 '+clean(x.area)+'</p><p>☎ '+clean(x.phone||"Kontak belum tersedia")+'</p><p>✉ '+clean(x.email||"Email belum tersedia")+'</p><p class="small">'+clean(x.note)+'</p><div class="actions">'+(wa?'<a class="btn" target="_blank" rel="noopener" href="https://wa.me/'+wa+'?text='+msg+'">Buka WhatsApp</a>':'')+(x.source?'<a class="btn secondary" target="_blank" rel="noopener" href="'+clean(x.source)+'">Sumber</a>':'')+'</div><select data-id="'+x.id+'"><option '+(x.status==="Belum dihubungi"?"selected":"")+'>Belum dihubungi</option><option '+(x.status==="Sudah dihubungi"?"selected":"")+'>Sudah dihubungi</option><option '+(x.status==="Tertarik"?"selected":"")+'>Tertarik</option><option '+(x.status==="Closing"?"selected":"")+'>Closing</option><option '+(x.status==="Tidak cocok"?"selected":"")+'>Tidak cocok</option></select></article>'}).join(""):'<div class="empty">Tidak ada prospek yang cocok.</div>';document.querySelectorAll("[data-id]").forEach(el=>el.addEventListener("change",e=>{const x=leads.find(v=>v.id==e.target.dataset.id);if(x){x.status=e.target.value;save();render()}}))}
-document.getElementById("q").addEventListener("input",render);document.getElementById("filter").addEventListener("change",render);
-document.getElementById("add").onclick=()=>{const name=document.getElementById("name").value.trim();if(!name){alert("Nama prospek wajib diisi.");return}leads.push({id:Date.now(),name,area:document.getElementById("area").value,category:document.getElementById("category").value,phone:document.getElementById("phone").value,email:document.getElementById("email").value,source:document.getElementById("source").value,note:document.getElementById("note").value,status:"Belum dihubungi"});save();["name","area","category","phone","email","source","note"].forEach(id=>document.getElementById(id).value="");render()};
-document.getElementById("export").onclick=()=>{const rows=[["Nama","Wilayah","Kategori","Telepon","Email","Status","Catatan","Sumber"],...leads.map(x=>[x.name,x.area,x.category,x.phone,x.email,x.status,x.note,x.source])];const csv=rows.map(r=>r.map(v=>'"'+String(v||"").replace(/"/g,'""')+'"').join(",")).join("\n");const a=document.createElement("a");a.href=URL.createObjectURL(new Blob(["\uFEFF"+csv],{type:"text/csv;charset=utf-8"}));a.download="prospek-gd-collection.csv";a.click();URL.revokeObjectURL(a.href)};
-render();
-</script></body></html>
+let leads=
