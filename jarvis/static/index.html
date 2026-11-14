@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#071a35">
+  <title>GD COLLECTION JARVIS</title>
+  <style>
+    :root{color-scheme:dark;font-family:Arial,sans-serif;background:#061329;color:#eaf5ff}
+    *{box-sizing:border-box}body{margin:0;min-height:100vh;background:radial-gradient(circle at 50% 0,#123c68,#061329 55%)}
+    main{max-width:760px;margin:auto;padding:28px 18px}header{text-align:center;padding:26px 10px}
+    .orb{width:86px;height:86px;margin:0 auto 16px;border:2px solid #55c9ff;border-radius:50%;box-shadow:0 0 22px #1daeff,inset 0 0 20px #1daeff;display:grid;place-items:center;color:#8ee4ff;font-size:30px}
+    h1{letter-spacing:3px;font-size:22px;margin:8px 0}p{color:#a9c8e2;line-height:1.5}
+    section{background:#0b203b;border:1px solid #1b5680;border-radius:16px;padding:20px;margin:16px 0;box-shadow:0 8px 30px #0004}
+    input,button{width:100%;padding:14px;border-radius:10px;border:1px solid #28638e;background:#07182d;color:#fff;font-size:16px}
+    button{margin-top:10px;background:#087bb7;border:0;font-weight:bold}#msg{min-height:24px;color:#8ee4ff}
+    .small{font-size:12px;color:#7899b8}
+  </style>
+</head>
+<body><main>
+  <header><div class="orb">✦</div><h1>GD COLLECTION</h1><p>JARVIS AI · BUSINESS ASSISTANT</p></header>
+  <section>
+    <h2>Masuk ke JARVIS</h2>
+    <p>Kerangka awal dashboard. Login akan aktif setelah server dikonfigurasi.</p>
+    <input id="password" type="password" placeholder="Kata sandi admin" autocomplete="current-password">
+    <button id="login">MASUK</button><p id="msg" role="status"></p>
+  </section>
+  <section><h3>Status sistem</h3><p id="health">Memeriksa server...</p><p class="small">Belum digunakan untuk menyimpan data pelanggan sungguhan.</p></section>
+</main>
+<script>
+async function check(){try{const r=await fetch('/api/health');const d=await r.json();document.getElementById('health').textContent='Server merespons · '+d.stage}catch(e){document.getElementById('health').textContent='Backend belum terhubung.'}}
+document.getElementById('login').addEventListener('click',async()=>{const msg=document.getElementById('msg');msg.textContent='Memproses...';try{const r=await fetch('/api/login',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({password:document.getElementById('password').value})});const d=await r.json();msg.textContent=d.ok?'Login berhasil. Dashboard akan dikembangkan berikutnya.':(d.error||'Gagal login.')}catch(e){msg.textContent='Server belum tersedia.'}});
+check();
+</script></body></html>
