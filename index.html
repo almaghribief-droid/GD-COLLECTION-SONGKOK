@@ -173,6 +173,55 @@
       pointer-events: none;
     }
 
+    .identity-mark {
+      width: min(100%, 720px);
+      margin: 0 auto 30px;
+      padding: 25px 18px 22px;
+      border: 1px solid rgba(212,175,55,.62);
+      border-radius: 8px;
+      background: linear-gradient(145deg, rgba(12,20,10,.82), rgba(36,29,18,.78));
+      box-shadow: 0 18px 48px rgba(0,0,0,.28), inset 0 0 35px rgba(212,175,55,.06);
+    }
+    .identity-monogram {
+      font-family: 'Cinzel Decorative', serif;
+      font-size: clamp(88px, 18vw, 150px);
+      font-weight: 900;
+      line-height: .95;
+      letter-spacing: -8px;
+      background: linear-gradient(135deg, #8c6418, #fff0b5 35%, #c99b29 65%, #ffe8a0);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+      text-shadow: 0 8px 24px rgba(0,0,0,.24);
+    }
+    .identity-name {
+      margin-top: 8px;
+      color: #f4dfaa;
+      font-family: 'Cinzel Decorative', serif;
+      font-size: clamp(19px, 4vw, 34px);
+      font-weight: 900;
+      line-height: 1.25;
+      letter-spacing: 1px;
+    }
+    .identity-tagline {
+      margin: 14px auto 0;
+      color: #f4dfaa;
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(17px, 3vw, 25px);
+      line-height: 1.35;
+      letter-spacing: .3px;
+    }
+    .identity-origin {
+      margin-top: 5px;
+      color: #d8c8a1;
+      font-size: clamp(10px, 1.8vw, 13px);
+      letter-spacing: .4px;
+    }
+    @media(max-width:430px) {
+      .identity-mark { padding: 20px 12px 18px; }
+      .identity-monogram { letter-spacing: -5px; }
+    }
+
     .hero-content {
       position: relative;
       z-index: 1;
@@ -859,6 +908,13 @@
   <main>
     <section class="hero" id="beranda">
       <div class="container hero-content">
+        <div class="identity-mark" aria-label="Balai Songkok GD Collection, Indonesian Traditional Headwear and Attire">
+          <div class="identity-monogram" aria-hidden="true">B</div>
+          <div class="identity-name">BALAI SONGKOK GD<br>COLLECTION</div>
+          <div class="ornament">✦</div>
+          <div class="identity-tagline">Indonesian Traditional Headwear &amp; Attire</div>
+          <div class="identity-origin">Made in Indonesia. Preserving cultural heritage.</div>
+        </div>
         <div class="eyebrow">Elegance • Quality • Craftsmanship</div>
 
         <h1 class="gold">Produsen Songkok & Peci Hitam</h1>
