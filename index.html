@@ -133,6 +133,54 @@
       text-align: center;
     }
 
+    .brand-symbol {
+      position: relative;
+      flex: 0 0 54px;
+      width: 54px;
+      height: 54px;
+      display: grid;
+      place-items: center;
+      margin-left: auto;
+      border: 1px solid rgba(212,175,55,.48);
+      border-radius: 50%;
+      color: #e7c36a;
+      background: radial-gradient(circle, rgba(212,175,55,.12), rgba(0,0,0,.18) 72%);
+      box-shadow: 0 0 18px rgba(212,175,55,.12), inset 0 0 12px rgba(212,175,55,.08);
+      text-decoration: none;
+    }
+    .brand-symbol .symbol-b {
+      position: relative;
+      z-index: 1;
+      font-family: 'Cinzel Decorative', serif;
+      font-size: 35px;
+      font-weight: 900;
+      line-height: 1;
+      text-shadow: 0 0 12px rgba(212,175,55,.32);
+    }
+    .brand-symbol .symbol-infinity {
+      position: absolute;
+      left: 2px;
+      top: 12px;
+      width: 48px;
+      text-align: center;
+      font-family: Georgia, serif;
+      font-size: 31px;
+      line-height: 1;
+      color: rgba(255,220,135,.78);
+      transform: scaleX(1.45);
+      pointer-events: none;
+    }
+    .brand-symbol:hover {
+      border-color: #e7c36a;
+      box-shadow: 0 0 24px rgba(212,175,55,.28);
+    }
+    @media(max-width: 700px) {
+      .nav { gap: 10px; min-height: 68px; }
+      .brand-symbol { flex-basis: 42px; width: 42px; height: 42px; }
+      .brand-symbol .symbol-b { font-size: 28px; }
+      .brand-symbol .symbol-infinity { left: 1px; top: 10px; width: 38px; font-size: 25px; }
+    }
+
     nav {
       display: flex;
       flex-wrap: wrap;
@@ -902,19 +950,16 @@
         <a href="#kontak">KONTAK</a>
         <a href="#blog">BLOG</a>
       </nav>
+      <a class="brand-symbol" href="#beranda" aria-label="Balai Songkok GD Collection — simbol B infinity" title="Balai Songkok GD Collection">
+        <span class="symbol-infinity" aria-hidden="true">∞</span>
+        <span class="symbol-b" aria-hidden="true">B</span>
+      </a>
     </div>
   </header>
 
   <main>
     <section class="hero" id="beranda">
       <div class="container hero-content">
-        <div class="identity-mark" aria-label="Balai Songkok GD Collection, Indonesian Traditional Headwear and Attire">
-          <div class="identity-monogram" aria-hidden="true">B</div>
-          <div class="identity-name">BALAI SONGKOK GD<br>COLLECTION</div>
-          <div class="ornament">✦</div>
-          <div class="identity-tagline">Indonesian Traditional Headwear &amp; Attire</div>
-          <div class="identity-origin">Made in Indonesia. Preserving cultural heritage.</div>
-        </div>
         <div class="eyebrow">Elegance • Quality • Craftsmanship</div>
 
         <h1 class="gold">Produsen Songkok & Peci Hitam</h1>
